@@ -1,0 +1,45 @@
+.hero.small {
+  min-height: auto;
+  padding: 30px 20px;
+}
+
+.main-pass {
+  padding: 40px 20px;
+  background: #0b2a3a;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  max-width: 640px;
+  width: 100%;
+  background: var(--glass-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.pass-details {
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+}
+
+.no-pass {
+  color: #ffd7d7;
+  text-align: center;
+  padding: 30px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

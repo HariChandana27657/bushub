@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #071a2b, #072c3d);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.msg {
+  margin-top: 10px;
+  color: #ffd7d7;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.04);
+  color: #e8fffb;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>BusHub — Dashboard</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="homepage.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2SxkMJ6vJv0n2aD1tZVQm3s1wzQp2s3v0b0z+7k=" crossorigin=""/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hero small">
+    <div class="hero__content">
+      <h1>Dashboard</h1>
+      <p class="tagline">Welcome back, <span id="usernameDisplay"></span></p>
+      <button class="btn ghost" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-grid">
+    <!-- Left: Profile & Pass Form -->
+    <section class="panel">
+      <h2>Your Profile</h2>
+      <table>
+        <thead>
+          <tr><th>User ID</th><th>Username</th><th>Email</th></tr>
+        </thead>
+        <tbody id="userTable"><tr><td colspan="3">Loading...</td></tr></tbody>
+      </table>
+
+      <h2>Create Bus Pass</h2>
+      <form id="busPassForm">
+        <label>Issue date</label>
+        <input type="date" id="issueDate" required>
+
+        <label>Expiry date</label>
+        <input type="date" id="expiryDate" required>
+
+        <label>Pass Type</label>
+        <select id="passType" required>
+          <option value="">Select</option>
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+
+        <label>Status</label>
+        <select id="status" required>
+          <option value="">Select</option>
+          <option>Active</option>
+          <option>Expired</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Create Pass</button>
+          <button type="button" class="btn ghost" id="viewPassBtn">View Pass</button>
+        </div>
+        <div id="formMsg" class="form-msg"></div>
+      </form>
+    </section>
+
+    <!-- Right: Map & Actions -->
+    <aside class="side-col">
+      <div class="panel">
+        <h2>Live Bus Tracking</h2>
+        <div id="map">Loading map…</div>
+      </div>
+      <div class="panel">
+        <h2>Actions</h2>
+        <div class="actions">
+          <button class="btn" id="clearPassBtn" style="background:#ff6b6b;color:#fff">Delete Pass</button>
+          <button class="btn" id="downloadPassBtn" style="background:#1f8dff;color:#fff">Export Pass</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-XQoYMqMTK8LvdxXYG3nZ/0sB2gZbM0y9v+8a2/7rCgk=" crossorigin=""></script>
+  <script src="homepage.js"></script>
+</body>
+</html>
